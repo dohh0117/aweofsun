@@ -113,7 +113,7 @@
   }
 /* 3번째 화면 */
 .contentsbox{position: absolute;
-    top: 30vh; left: 5vw;
+    top: 300px; left: 5vw;
 }
 .cherater{
     display: flex;
@@ -128,7 +128,42 @@
     background-color: #292929;
     border: #777;
 }
-.dialog{
+.dialogbox{
     width: 50vw;height: 20vh;
     background-color: #292929;
 }
+#third>.contentsbox{
+    display: block;
+}
+#third>.contentsbox:nth-child(2){
+    opacity: 0;
+}
+.dialog {
+    height: 55px;
+    display: flex;
+    /* justify-content: center;
+    align-items: flex-end; */
+    /* text-align: center; */
+    font-size: 1.8rem;
+  }
+  
+  .talk {
+    line-height: 30px;
+    font-size: 1.2rem;
+    padding-top: 15px;
+    margin-left: 1rem;
+    font-size: 16px;
+    color: #fff;
+  }
+  
+  .talk::after {
+    content: '';
+    margin-left: .4rem;
+    border-right: 2px solid #777;
+    animation: cursor .9s infinite steps(2);
+  }
+  
+  @keyframes cursor {
+    from { border-right: 2px solid #eaeaea29; }
+    to { border-right: 2px solid #e0e0e0; }
+  }

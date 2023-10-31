@@ -109,6 +109,76 @@ window.onload=function(){
       scene[1].style.opacity="0"
       scene[2].style.opacity="1"
       scene.forEach(img=>img.style.transition="all 3s");
+      const $text = document.querySelector(".dialog .talk");
+      const letters = [
+        "당신, 술탄의 아들이죠."
+      ];
+      const speed = 100;  
+      let i = 0;
+      const changeLineBreak = (letter) => {
+        return letter.map(text => text === "\n" ? "<br>" : text);
+      }
+      
+     // 타이핑 효과
+       const typing = async () => {  
+        // 기존코드에서 개행치환코드 추가
+        const letter = changeLineBreak(letters[i].split(""));
+        
+        while (letter.length) {
+        await wait(speed);
+        $text.innerHTML += letter.shift(); 
+        }
+        
+        // 잠시 대기
+        await wait(800);
+        
+        
+      }
+    
+      function wait(ms) {
+        return new Promise(res => setTimeout(res, ms))
+      }
+      
+      // 초기 실행
+      setTimeout(typing, 1500);
+      
+    }else if(currentIndex ==3){
+      const dialog =document.querySelectorAll(".contentsbox")
+      dialog[0].style.opacity="0"
+      dialog[1].style.opacity="1"
+      dialog.forEach(img=>img.style.transition="all 1s")
+      const $text = document.querySelector(".dialog .talk");
+      const letters = [
+        "당신, 술탄의 아들이죠."
+      ];
+      const speed = 100;  
+      let i = 0;
+      const changeLineBreak = (letter) => {
+        return letter.map(text => text === "\n" ? "<br>" : text);
+      }
+      
+     // 타이핑 효과
+       const typing = async () => {  
+        // 기존코드에서 개행치환코드 추가
+        const letter = changeLineBreak(letters[i].split(""));
+        
+        while (letter.length) {
+        await wait(speed);
+        $text.innerHTML += letter.shift(); 
+        }
+        
+        // 잠시 대기
+        await wait(800);
+        
+        
+      }
+    
+      function wait(ms) {
+        return new Promise(res => setTimeout(res, ms))
+      }
+      
+      // 초기 실행
+      setTimeout(typing, 1500);
 
     }
   }
