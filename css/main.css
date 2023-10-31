@@ -39,14 +39,13 @@
     font-size: 20px;
     color: #fff;
 }
-.gear{
+#nextbtn{
     margin-left: 32px;
 }
 #scene{
     width: 1150px;
     height: 760px;
     position: relative;
-   
 }
 #scene>div{
     display: block;
@@ -62,6 +61,9 @@
     position: absolute;
     top: 10rem;left: 10rem;
     z-index: 100;
+}
+#open>img{
+    object-fit: fill;
 }
 .title{
     padding-bottom: 12px;
@@ -87,12 +89,15 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    text-align: center;
     font-size: 1.8rem;
   }
   
   .text {
+    line-height: 30px;
     font-size: 1.2rem;
     margin-left: .6rem;
+    color: #fff;
   }
   
   .text::after {
@@ -103,7 +108,27 @@
   }
   
   @keyframes cursor {
-    from { border-right: 2px solid #222; }
-    to { border-right: 2px solid #777; }
+    from { border-right: 2px solid #eaeaea29; }
+    to { border-right: 2px solid #e0e0e0; }
   }
-
+/* 3번째 화면 */
+.contentsbox{position: absolute;
+    top: 30vh; left: 5vw;
+}
+.cherater{
+    display: flex;
+    align-items: end;
+}
+.name{
+    text-align: center;
+    color: #fff;
+    font-family:NeoDunggeunmo Pro ;
+    display: inline-block;
+    width: 100px;height: 25px;
+    background-color: #292929;
+    border: #777;
+}
+.dialog{
+    width: 50vw;height: 20vh;
+    background-color: #292929;
+}
